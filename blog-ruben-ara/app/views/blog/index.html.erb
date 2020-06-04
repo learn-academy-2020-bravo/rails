@@ -1,0 +1,16 @@
+<h1>Posts</h1>
+    <ul>
+        <% @blogs.each do |blog| %>
+            <li>
+                <%= blog.title %>
+            </li>
+                    <% blog.comments.each do |comment| %>
+                    
+                        <%= comment.author %>
+                        <%= comment.content %>
+                        
+                    <% end %> 
+        <% end %> 
+    </ul>
+
+<%= link_to 'Add Posts', new_post_path %>
